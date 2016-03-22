@@ -34,14 +34,18 @@ public class UsaHeap {
             op = Integer.parseInt(JOptionPane.showInputDialog("\nOpções: " +
 
                     "\n\n" +
-                    "\n 1 - Inserir no Heap" +
-                    "\n 2 - Remover do Heap" +
-                    "\n 3 - Inserir um Vetor nao Heap" +
-                    "\n 4 - Constroi Heap do vetor" +
+                    "\n 1 - Inserir no Heap1" +
+                    "\n 2 - Remover do Heap1" +
+                    "\n 3 - Inserir um Vetor nao Heap2" +
+                    "\n 4 - Constroi Heap2 do vetor" +
+                    "\n 5 - Remover do Heap2" +
                     "\n\n" +
+                    objHeap.imprimeHeap(objHeap) +
+                    "\n\n" +
+                    objNaoHeap.imprimeHeap(objNaoHeap) +
+                    "\n\n"
 
-                    objHeap.imprimeHeap(objHeap) + "\n\n")
-
+                    )
 
             );
 
@@ -78,6 +82,13 @@ public class UsaHeap {
                 case 4:
 
                     objNaoHeap.constroi_heap(objNaoHeap,1);
+                    System.out.println(objNaoHeap.imprimeHeap(objNaoHeap));
+                    break;
+
+                case 5:
+
+                    auxI = objNaoHeap.remove(objNaoHeap);
+                    JOptionPane.showMessageDialog(null,"Chave Removida: " + auxI);
                     System.out.println(objNaoHeap.imprimeHeap(objNaoHeap));
                     break;
 
